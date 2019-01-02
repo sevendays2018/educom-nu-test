@@ -53,7 +53,7 @@ function processMessage($update) {
             
         );
     } else if($update["result"]["action"] == "mornor2"){
-        $userDataGET = json_encode($update["originalRequest"]["data"]["data"]["source"]["userId"]);
+        $userDataGET = json_encode($update["originalRequest"]["data"]["data"]["replyToken"]["source"]["userId"]);
         $userDataGET = substr($userDataGET,1,-1);
         
         $url = 'https://api.line.me/v2/profile/'.$userDataGET;
