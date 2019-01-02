@@ -29,8 +29,8 @@ function processMessage($update) {
       "payload" => array(
           "line" => array(
          "type": "image",
-    "originalContentUrl": "http://www.zcooby.com/wp-content/uploads/2015/05/04-thursday.jpg",
-    "previewImageUrl": "http://www.zcooby.com/wp-content/uploads/2015/05/04-thursday.jpg"
+    "originalContentUrl": "https://www.zcooby.com/wp-content/uploads/2015/05/04-thursday.jpg",
+    "previewImageUrl": "https://www.zcooby.com/wp-content/uploads/2015/05/04-thursday.jpg"
 ))
   )]
 )
