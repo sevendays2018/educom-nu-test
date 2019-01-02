@@ -36,6 +36,22 @@ function processMessage($update) {
 )
             
         );
+    } else if($update["result"]["action"] == "mornor1"){
+        sendMessage(
+            
+           array(
+  "messages" => [ array(
+      "type" => 4,
+      "payload" => array(
+          "line" => array(
+         "type" => "image",
+    "originalContentUrl" => "https://upload.wikimedia.org/wikipedia/th/thumb/1/15/NU_Logo.png/1200px-NU_Logo.png",
+    "previewImageUrl" => "https://upload.wikimedia.org/wikipedia/th/thumb/1/15/NU_Logo.png/1200px-NU_Logo.png"
+))
+  )]
+)
+            
+        );
     }
 }
 
