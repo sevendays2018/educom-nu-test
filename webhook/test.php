@@ -25,9 +25,11 @@ function processMessage($update) {
             
            array(
   "messages" => [ array(
-          "type" => "image",
-          "originalContentUrl" => "http://www.zcooby.com/wp-content/uploads/2015/05/04-thursday.jpg",
-    "previewImageUrl" => "http://www.zcooby.com/wp-content/uploads/2015/05/04-thursday.jpg"
+      "type" => 4,
+      "payload" => array(
+          "line" => array(
+          "type" => "text",
+          "text" => "เดี๋ยวปั๊ดทุ่มด้วยโพเดียม"
 ))
   )]
 )
