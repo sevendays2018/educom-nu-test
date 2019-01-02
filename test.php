@@ -15,8 +15,8 @@ function processMessage($update) {
       "payload" => array(
           "line" => array(
           "type" => "image",
-          "originalContentUrl" => "https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg",
-    "previewImageUrl" => "https://i.ytimg.com/vi/bjgbFdfty8Q/maxresdefault.jpg"
+          "originalContentUrl" => "http://www.zcooby.com/wp-content/uploads/2015/05/04-thursday.jpg",
+    "previewImageUrl" => "http://www.zcooby.com/wp-content/uploads/2015/05/04-thursday.jpg"
 ))
   )]
 )
