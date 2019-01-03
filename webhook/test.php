@@ -33,7 +33,7 @@ $result = curl_exec($ch);
 
 curl_close($ch);
         $tester = "{'userId':'001256','displayName':'TESTTT'}";
-$finale = json_decode($tester, true);  
+$finale = json_decode($result['displayName'], true);  
 $data = json_encode($finale);
         
 
