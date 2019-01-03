@@ -33,7 +33,7 @@ function processMessage($update) {
           
             "type" => "message",
             "label"=> "ใช่",
-            "text" => "yes"
+            "text" => "call: 055-555-555"
           ),
           array(
             "type" => "message",
