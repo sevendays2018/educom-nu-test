@@ -56,7 +56,6 @@ function processMessage($update) {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-    curl_close($ch);
     $result = curl_exec($ch);
     $finale = json_decode($result, true);
         sendMessage(
@@ -71,6 +70,7 @@ function processMessage($update) {
                 )]
             )
         );
+        curl_close($ch);
     }
 }
 
