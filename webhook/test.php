@@ -32,10 +32,8 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 $result = curl_exec($ch);
 
 curl_close($ch);
-        $tester = "{'userId':'001256','displayName':'TESTTT'}";
-$finale = json_decode($result, true);  
-$data = json_encode($finale['displayName']);
-        
+        $myJSONString = json_encode($result);
+$data = json_decode($myString);
 
         sendMessage(
 
@@ -53,7 +51,7 @@ $data = json_encode($finale['displayName']);
 
           "type" => "text",
 
-          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$data." แร้วจะหาว่าไม่เตือน!"
+          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$data['displayName']." แร้วจะหาว่าไม่เตือน!"
 
 ))
 
