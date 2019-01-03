@@ -22,7 +22,7 @@ function processMessage($update) {
         
 
        // $url = 'https://api.line.me/v2/bot/profile/'.$userDataGET;
-        $url = 'https://api.line.me/v2/bot/group/'.$userDataGET2.'/members/'.$userDataGET;
+        $url = 'https://api.line.me/v2/bot/group/'.$userDataGET2.'/member/'.$userDataGET;
 
 $headers = array('Authorization: Bearer 7fTjK4baPHngWnXtFs4r41HcLucnTPLhyu3S/eoWP1dguioSWB948pjX5Z6+j+ugOqD/LwpoQCauRXlfSVA8VE9jJX/bFkpR99TBa7wAoO7pwMVtLQlsbr9umGE1vH8wDwOV4jlyZ1wwh6HGCGpZRAdB04t89/1O/w1cDnyilFU=');
 
