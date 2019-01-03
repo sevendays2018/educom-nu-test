@@ -32,8 +32,9 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 $result = curl_exec($ch);
 
 curl_close($ch);
-$result = "{'displayName':'HIIIII'}";
-$finale = json_decode("{'displayName':'HIIIII'}", true);
+        
+$finale = json_decode($result, true);
+        $finale = json_encode($finale);
 
         
 
@@ -53,7 +54,7 @@ $finale = json_decode("{'displayName':'HIIIII'}", true);
 
           "type" => "text",
 
-          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$finale['displayName']." แร้วจะหาว่าไม่เตือน!"
+          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$finale." แร้วจะหาว่าไม่เตือน!"
 
 ))
 
