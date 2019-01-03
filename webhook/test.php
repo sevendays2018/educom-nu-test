@@ -33,7 +33,8 @@ $result = curl_exec($ch);
 
 curl_close($ch);
         
-$finale = $result;
+$finale = json_decode($result);
+        $finale = $finale["displayName"];
         
  
 
