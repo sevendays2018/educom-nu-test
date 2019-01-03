@@ -32,8 +32,8 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 $result = curl_exec($ch);
 
 curl_close($ch);
-        
-$finale = json_decode($result);  
+        $tester = "{'userId':'001256','displayName':'TESTTT'}";
+$finale = json_decode($tester, true);  
 $data = json_encode($finale);
         
 
