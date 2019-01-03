@@ -16,9 +16,14 @@ function processMessage($update) {
       "type" => 4,
       "payload" => array(
           "line" => array(
-         "type" => "image",
+         /*"type" => "image",
     "originalContentUrl" => "https://www.zcooby.com/wp-content/uploads/2015/05/04-thursday.jpg",
-    "previewImageUrl" => "https://www.zcooby.com/wp-content/uploads/2015/05/04-thursday.jpg"
+    "previewImageUrl" => "https://www.zcooby.com/wp-content/uploads/2015/05/04-thursday.jpg"*/
+              "type": "location",
+    "title": "NU DORM",
+    "address": "99/15 ต.ท่าโพธิ์ อ.เมืองพิษณุโลก จ.พิษณุโลก 65000",
+    "latitude": 16.73722222,
+    "longitude": 100.19805556
 ))
   )]
 )
