@@ -7,7 +7,7 @@
 // ACTION and REPLY Process //
 /* CODE HERE */
 function processMessage($update) {
-    if($update["result"]["action"] == "sayHello"){
+    if($update["queryResult"]["action"] == "sayHello"){
         sendMessage(
             
            array(
