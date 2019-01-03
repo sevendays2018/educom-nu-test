@@ -35,7 +35,7 @@ curl_close($ch);
         
 $finale = $resule["displayName"];
         
- $finale = "TEST";
+ 
 
         
 
