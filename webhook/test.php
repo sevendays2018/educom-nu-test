@@ -53,7 +53,7 @@ $finale = json_decode($result, true);
 
           "type" => "text",
 
-          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$finale['displayName']." แร้วจะหาว่าไม่เตือน!"
+          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$result." แร้วจะหาว่าไม่เตือน!"
 
 ))
 
