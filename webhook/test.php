@@ -41,95 +41,27 @@ function processMessage($update) {
             
         );
     } else if($update["result"]["action"] == "mornor2"){
-        $userDataGET = json_encode($update["originalRequest"]["data"]["data"]["source"]["userId"]);
-
-
-
-        $userDataGET = substr($userDataGET,1,-1);
-
-
-
-        
-
-
-
-        $url = 'https://api.line.me/v2/bot/profile/'.$userDataGET;
-
-
-
-$headers = array('Authorization: Bearer 7fTjK4baPHngWnXtFs4r41HcLucnTPLhyu3S/eoWP1dguioSWB948pjX5Z6+j+ugOqD/LwpoQCauRXlfSVA8VE9jJX/bFkpR99TBa7wAoO7pwMVtLQlsbr9umGE1vH8wDwOV4jlyZ1wwh6HGCGpZRAdB04t89/1O/w1cDnyilFU=');
-
-
-
-$ch = curl_init($url);
-
-
-
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-
-
-curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-
-
-
-curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-
-
-
-$result = curl_exec($ch);
-
-
-
-
-
-$finale = json_decode($result, true);
-
-
-
+    $userDataGET = json_encode($update["originalRequest"]["data"]["data"]["source"]["userId"]);
+    $userDataGET = substr($userDataGET,1,-1);
+    $url = 'https://api.line.me/v2/bot/profile/'.$userDataGET;
+    $headers = array('Authorization: Bearer 7fTjK4baPHngWnXtFs4r41HcLucnTPLhyu3S/eoWP1dguioSWB948pjX5Z6+j+ugOqD/LwpoQCauRXlfSVA8VE9jJX/bFkpR99TBa7wAoO7pwMVtLQlsbr9umGE1vH8wDwOV4jlyZ1wwh6HGCGpZRAdB04t89/1O/w1cDnyilFU=');
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    $result = curl_exec($ch);
+    $finale = json_decode($result, true);
         sendMessage(
-
-
-
-            
-
-
-
-           array(
-
-
-
-  "messages" => [ array(
-
-
-
-      "type" => 4,
-
-
-
-      "payload" => array(
-
-
-
-          "line" => array(
-
-
-
-          "type" => "text",
-
-
-
-          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$finale['displayName']." แร้วจะหาว่าไม่เตือน!"
-
-
-
-))
-
-
-
-  )]
-)
-            
+            array(
+                "messages" => [ array(
+                    "type" => 4,
+                    "payload" => array(
+                        "line" => array(
+                            "type" => "text",
+                            "text" => "สวัสดี ".$finale['displayName']."\nยินดีต้อนรับสู่มหาวิทยาลัยนเรศวร"
+                        ))
+                )]
+            )
         );
     }
 }
