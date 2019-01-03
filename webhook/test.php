@@ -43,7 +43,7 @@
       ]
   )*/
         "type" => "text",
-        "text" => $update
+        "text" => $queryResult
 
 ))
   )]
@@ -101,9 +101,9 @@ $update_response = file_get_contents("php://input");
 $update = json_decode($update_response, true);
 
 // Check INPUT ACTION and Send to the Process //
-if (isset($update["result"]["action"])) {
+/*if (isset($update["result"]["action"])) {
     processMessage($update);
-}
+}*/
 
 // Function for Sending Back Response //
 function sendMessage($parameters) {
