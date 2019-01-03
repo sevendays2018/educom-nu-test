@@ -6,8 +6,8 @@
 
 // ACTION and REPLY Process //
 /* CODE HERE */
-function processMessage($update) {
-    if($update["result"]["action"] == "sayHello"){
+//function processMessage($update) {
+   // if($update["result"]["action"] == "sayHello"){
         sendMessage(
             
            array(
@@ -24,8 +24,8 @@ function processMessage($update) {
                 "latitude" => 16.73722222,
                 "longitude" => 100.19805556*/
               
-  "type" => "template",
-  "altText" => "เครื่องของคุณไม่รองรับฟังก์ชันนี้",
+  /*"type" => "template",
+  "tText" => "เครื่องของคุณไม่รองรับฟังก์ชันนี้",
   "template" => array(
       "type" => "confirm",
       "text" => "ต้องการลาออกจากการเป็นิสิตใช่หรือไม่?",
@@ -41,14 +41,16 @@ function processMessage($update) {
             "text" => "no"
           )
       ]
-  )
+  )*/
+        "type" => "text",
+        "text" => $update
 
 ))
   )]
 )
             
         );
-    } else if($update["result"]["action"] == "mornor1"){
+    /*} else if($update["result"]["action"] == "mornor1"){
         sendMessage(
             
            array(
@@ -90,9 +92,9 @@ function processMessage($update) {
                 )]
             )
         );
-        curl_close($ch);
-    }
-}
+        curl_close($ch);*/
+   // }
+//}
 
 // Recieve INPUT Data //
 $update_response = file_get_contents("php://input");
