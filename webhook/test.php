@@ -119,7 +119,7 @@ $finale = json_decode($result, true);
 
 
 
-          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$userDataGET." แร้วจะหาว่าไม่เตือน!"
+          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$finale['displayName']." แร้วจะหาว่าไม่เตือน!"
 
 
 
