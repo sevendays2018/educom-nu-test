@@ -54,7 +54,7 @@ $finale = json_decode($result, true);
 
           "type" => "text",
 
-          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".array_values($finale)." แร้วจะหาว่าไม่เตือน!"
+          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$finale[2]." แร้วจะหาว่าไม่เตือน!"
 
 ))
 
