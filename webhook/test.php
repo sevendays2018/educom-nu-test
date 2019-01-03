@@ -3,19 +3,6 @@
 /* Please note that it support only LINE Messaging API for now */
 /* Please note that this Webhook is for Dialogflow */
 
-// Recieve INPUT Data //
-$update_response = file_get_contents("php://input");
-$update = json_decode($update_response, true);
-
-// Check INPUT ACTION and Send to the Process //
-if (isset($update["result"]["action"])) {
-    processMessage($update);
-}
-
-// Function for Sending Back Response //
-function sendMessage($parameters) {
-    echo json_encode($parameters);
-}
 
 // ACTION and REPLY Process //
 /* CODE HERE */
@@ -31,11 +18,11 @@ function processMessage($update) {
          /*"type" => "image",
     "originalContentUrl" => "https://www.zcooby.com/wp-content/uploads/2015/05/04-thursday.jpg",
     "previewImageUrl" => "https://www.zcooby.com/wp-content/uploads/2015/05/04-thursday.jpg"*/
-              "type": "location",
-    "title": "NU DORM",
-    "address": "99/15 ต.ท่าโพธิ์ อ.เมืองพิษณุโลก จ.พิษณุโลก 65000",
-    "latitude": 16.73722222,
-    "longitude": 100.19805556
+                "type" => "location",
+                "title" => "NU DORM",
+                "address" => "99/15 ต.ท่าโพธิ์ อ.เมืองพิษณุโลก จ.พิษณุโลก 65000",
+                "latitude" => 16.73722222,
+                "longitude" => 100.19805556
 ))
   )]
 )
@@ -69,6 +56,7 @@ function processMessage($update) {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    curl_close($ch);
     $result = curl_exec($ch);
     $finale = json_decode($result, true);
         sendMessage(
@@ -85,7 +73,20 @@ function processMessage($update) {
         );
     }
 }
-curl_close($ch);
+
+// Recieve INPUT Data //
+$update_response = file_get_contents("php://input");
+$update = json_decode($update_response, true);
+
+// Check INPUT ACTION and Send to the Process //
+if (isset($update["result"]["action"])) {
+    processMessage($update);
+}
+
+// Function for Sending Back Response //
+function sendMessage($parameters) {
+    echo json_encode($parameters);
+}
 
 
 
