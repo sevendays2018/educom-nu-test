@@ -31,8 +31,8 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 
 $result = curl_exec($ch);
 
-curl_close($ch);
-$finale = $result;
+
+$finale = json_decode($result, true);
 
         sendMessage(
 
@@ -85,5 +85,5 @@ if (isset($update["result"]["action"])) {
 }
 
 /* Developed by 7 Days Team, Trained by Club Everyday's Members */
-
+curl_close($ch);
 ?>
