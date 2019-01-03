@@ -74,7 +74,7 @@ $finale = json_decode($result, true);
       "payload" => array(
           "line" => array(
           "type" => "text",
-          "text" => $result//"สวัสดี ".$finale['displayName']."\nยินดีต้อนรับสู่มหาวิทยาลัยนเรศวร"
+          "text" => "สวัสดี ".$finale['displayName']."\nยินดีต้อนรับสู่มหาวิทยาลัยนเรศวร"
 ))
   )]
 )
