@@ -33,10 +33,8 @@ $result = curl_exec($ch);
 
 curl_close($ch);
         
-$finale = json_decode($result, true);  
-        $data = json_encode($finale);
- 
-
+$finale = json_decode($result);  
+$data = json_encode($finale);
         
 
         sendMessage(
