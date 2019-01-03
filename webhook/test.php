@@ -53,8 +53,8 @@ function processMessage($update) {
             
         );
     } else if($update["result"]["action"] == "mornor2"){
-        $userDataGET = json_encode($update["originalRequest"]["source"]["data"]["data"]["replyToken"]["source"]["userId"]);
-        $userDataGET = substr($userDataGET,1,-1);
+        $userDataGET = json_encode($update["originalRequest"]["data"]["data"]["source"]["userId"]);
+        //$userDataGET = substr($userDataGET,1,-1);
         
         $url = 'https://api.line.me/v2/profile/'.$userDataGET;
 $headers = array('Authorization: Bearer 7fTjK4baPHngWnXtFs4r41HcLucnTPLhyu3S/eoWP1dguioSWB948pjX5Z6+j+ugOqD/LwpoQCauRXlfSVA8VE9jJX/bFkpR99TBa7wAoO7pwMVtLQlsbr9umGE1vH8wDwOV4jlyZ1wwh6HGCGpZRAdB04t89/1O/w1cDnyilFU=');
@@ -74,7 +74,7 @@ $finale = json_decode($result, true);
       "payload" => array(
           "line" => array(
           "type" => "text",
-          "text" => "สวัสดี ".$finale['displayName']."\nยินดีต้อนรับสู่มหาวิทยาลัยนเรศวร"
+          "text" => $userDataGET//"สวัสดี ".$finale['displayName']."\nยินดีต้อนรับสู่มหาวิทยาลัยนเรศวร"
 ))
   )]
 )
