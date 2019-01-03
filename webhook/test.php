@@ -56,7 +56,7 @@ function processMessage($update) {
         $userDataGET = json_encode($update["originalRequest"]["data"]["data"]["source"]["userId"]);
         $userDataGET = substr($userDataGET,1,-1);
         
-        $url = 'https://api.line.me/v2/profile/'.$userDataGET;
+        $url = 'https://api.line.me/v2/'.$userDataGET;
 $headers = array('Authorization: Bearer 7fTjK4baPHngWnXtFs4r41HcLucnTPLhyu3S/eoWP1dguioSWB948pjX5Z6+j+ugOqD/LwpoQCauRXlfSVA8VE9jJX/bFkpR99TBa7wAoO7pwMVtLQlsbr9umGE1vH8wDwOV4jlyZ1wwh6HGCGpZRAdB04t89/1O/w1cDnyilFU=');
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -74,7 +74,7 @@ $finale = json_decode($result, true);
       "payload" => array(
           "line" => array(
           "type" => "text",
-          "text" => $result//"สวัสดี ".$finale['displayName']."\nยินดีต้อนรับสู่มหาวิทยาลัยนเรศวร"
+          "text" => "สวัสดี ".$finale['displayName']."\nยินดีต้อนรับสู่มหาวิทยาลัยนเรศวร"
 ))
   )]
 )
