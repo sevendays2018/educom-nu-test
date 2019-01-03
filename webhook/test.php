@@ -6,8 +6,8 @@
 
 // ACTION and REPLY Process //
 /* CODE HERE */
-//function processMessage($update) {
-   // if($update["result"]["action"] == "sayHello"){
+function processMessage($update) {
+    if($update["result"]["action"] == "sayHello"){
         sendMessage(
             
            array(
@@ -43,14 +43,14 @@
       ]
   )*/
         "type" => "text",
-        "text" => $queryResult
+        "text" => "PASS"
 
 ))
   )]
 )
             
         );
-    /*} else if($update["result"]["action"] == "mornor1"){
+    } else if($update["result"]["action"] == "mornor1"){
         sendMessage(
             
            array(
@@ -92,9 +92,9 @@
                 )]
             )
         );
-        curl_close($ch);*/
-   // }
-//}
+        curl_close($ch);
+    }
+}
 
 // Recieve INPUT Data //
 $update_response = file_get_contents("php://input");
