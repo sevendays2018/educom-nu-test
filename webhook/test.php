@@ -33,7 +33,7 @@ $result = curl_exec($ch);
 
 curl_close($ch);
 
-$finale = json_decode($result, true);
+$finale = json_decode($result);
 
         
 
