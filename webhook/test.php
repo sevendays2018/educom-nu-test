@@ -26,22 +26,22 @@ function processMessage($update) {
               
   "type" => "template",
   "altText" => "เครื่องของคุณไม่รองรับฟังก์ชันนี้",
-  "template" => {
+  "template" => array(
       "type" => "confirm",
       "text" => "ต้องการลาออกจากการเป็นิสิตใช่หรือไม่?",
-      "actions" => [
-          {
+      "actions" => [ array(
+          
             "type" => "message",
             "label"=> "ใช่",
             "text" => "yes"
-          },
-          {
+          ),
+          array(
             "type" => "message",
             "label" => "ไม่ใช่",
             "text" => "no"
-          }
+          )
       ]
-  }
+  )
 
 ))
   )]
