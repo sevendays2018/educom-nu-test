@@ -33,8 +33,9 @@ $result = curl_exec($ch);
 
 curl_close($ch);
         
-$finale = json_decode($result, true);
-
+$finale = $resule["displayName"];
+        
+ $finale = substr($finale,1,-1);
 
         
 
@@ -54,7 +55,7 @@ $finale = json_decode($result, true);
 
           "type" => "text",
 
-          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$finale[2]." แร้วจะหาว่าไม่เตือน!"
+          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$finale." แร้วจะหาว่าไม่เตือน!"
 
 ))
 
