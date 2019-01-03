@@ -18,11 +18,31 @@ function processMessage($update) {
          /*"type" => "image",
     "originalContentUrl" => "https://www.zcooby.com/wp-content/uploads/2015/05/04-thursday.jpg",
     "previewImageUrl" => "https://www.zcooby.com/wp-content/uploads/2015/05/04-thursday.jpg"*/
-                "type" => "location",
+               /* "type" => "location",
                 "title" => "NU DORM",
                 "address" => "99/15 ต.ท่าโพธิ์ อ.เมืองพิษณุโลก จ.พิษณุโลก 65000",
                 "latitude" => 16.73722222,
-                "longitude" => 100.19805556
+                "longitude" => 100.19805556*/
+              
+  "type" => "template",
+  "altText" => "เครื่องของคุณไม่รองรับฟังก์ชันนี้",
+  "template" => {
+      "type" => "confirm",
+      "text" => "ต้องการลาออกจากการเป็นิสิตใช่หรือไม่?",
+      "actions" => [
+          {
+            "type" => "message",
+            "label"=> "ใช่",
+            "text" => "yes"
+          },
+          {
+            "type" => "message",
+            "label" => "ไม่ใช่",
+            "text" => "no"
+          }
+      ]
+  }
+
 ))
   )]
 )
