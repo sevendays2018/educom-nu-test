@@ -33,6 +33,7 @@ $result = curl_exec($ch);
 
 curl_close($ch);
 
+        $result = rtrim($result, "\0");
 $finale = json_decode($result);
 
         
