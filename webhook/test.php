@@ -33,7 +33,6 @@ $result = curl_exec($ch);
 
 curl_close($ch);
 
-        $result = rtrim($result, "\0");
 $finale = json_decode($result, true);
 
         
@@ -54,7 +53,7 @@ $finale = json_decode($result, true);
 
           "type" => "text",
 
-          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$finale['displayName']." แร้วจะหาว่าไม่เตือน!"
+          "text" => "เรียกบ่อยๆ ระวังไว้เถอะ ".$result['displayName']." แร้วจะหาว่าไม่เตือน!"
 
 ))
 
